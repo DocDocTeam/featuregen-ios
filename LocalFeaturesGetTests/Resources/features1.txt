@@ -1,0 +1,22 @@
+//
+//  Created by LocalFeaturesGen.
+//  !!!DO NOT MODIFY MANUALLY!!!
+//  Copyright © 2018 DocDoc. All rights reserved.
+//
+
+import Foundation
+
+struct LocalFeatures {
+
+    // swiftlint:disable all
+    static let cities = LocalFeature(uniqueId: 28, name: "Новая логика для выбора места поиска", enabledByDefault: false)
+    static let diagnostic = LocalFeature(uniqueId: 100, name: "Диагностика", enabledByDefault: true)
+    static let newMedcard = LocalFeature(uniqueId: 16543, name: "Новая медкарта", enabledByDefault: false)
+    static var list: [LocalFeature] {
+        return [
+            cities,
+            diagnostic,
+            newMedcard
+        ]
+    }
+}

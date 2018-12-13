@@ -1,0 +1,18 @@
+//
+//  Created by LocalFeaturesGen.
+//  !!!DO NOT MODIFY MANUALLY!!!
+//  Copyright © 2018 DocDoc. All rights reserved.
+//
+
+import Foundation
+
+struct LocalFeatures {
+
+    // swiftlint:disable all
+
+    static var list: [LocalFeature] {
+        return [
+            
+        ]
+    }
+}

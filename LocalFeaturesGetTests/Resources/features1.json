@@ -1,0 +1,25 @@
+{
+  "features": [
+      {
+      "id": "cities",
+      "uniqueId": 28,
+      "label": "Новая логика для выбора места поиска",
+      "isLocal": true,
+      "defaultValue": false
+    },
+    {
+      "id": "diagnostic",
+      "uniqueId": 100,
+      "label": "Диагностика",
+      "isLocal": true,
+      "defaultValue": true
+    },
+    {
+      "id": "newMedcard",
+      "uniqueId": 16543,
+      "label": "Новая медкарта",
+      "isLocal": true,
+      "defaultValue": false
+    }
+  ]
+}
