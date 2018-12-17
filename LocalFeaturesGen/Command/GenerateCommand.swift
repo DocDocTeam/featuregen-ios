@@ -36,6 +36,13 @@ struct GenerateCommand: Command {
         }
         
         let generated = generateFileFrom(rawJson: jsonString)
+        let changed = checkIfContentChanged(newContent: generated)
+        
+        if !changed {
+            printMessage("No changes in features, skipping")
+            exit(0)
+        }
+        
         IOUtils.removeFile(at: outputPath)
         
         do {
@@ -57,6 +64,15 @@ struct GenerateCommand: Command {
             TemplateSubstitutions.featureDeclarations: featureTemplates,
             TemplateSubstitutions.featureVariableNames: variableNames
             ])
+    }
+    
+    private func checkIfContentChanged(newContent: String) -> Bool {
+        do {
+            let oldContent = try IOUtils.readContentsOfFile(at: outputPath)
+            return oldContent != newContent
+        } catch {
+            return true
+        }
     }
     
 }
